@@ -1,7 +1,13 @@
 import pygame
-import create_tetromino
+import tetromino
 
 score = 0
+falling_distance = 0
+
+def translateGameCordsIntoScreenCords(coords):
+    coords[0] = coords[0]*40
+    coords[1] = coords[1]*40
+    return coords
 
 pygame.init()
 gui_surface = pygame.display.set_mode(size = (220, 440))
@@ -13,5 +19,6 @@ def draw_gui(score):
     pygame.display.flip()
 
 #Game loop
-while True:
+running = True
+while running:
     draw_gui(score)
