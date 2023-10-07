@@ -10,8 +10,8 @@ def translateGameCordsIntoScreenCords(coords):
     return coords
 
 pygame.init()
-gui_surface = pygame.display.set_mode(size = (220, 440))
-game_surface = pygame.display.set_mode(size = (200, 400))
+gui_surface = pygame.display.set_mode(size = (440, 880))
+game_surface = pygame.display.set_mode(size = (400, 800))
 
 def draw_gui(score):
     score_text = pygame.font.Font.render(pygame.font.Font(), f"Score: {score}".encode(), False, (255, 255, 255))
